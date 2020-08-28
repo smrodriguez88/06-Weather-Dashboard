@@ -7,9 +7,9 @@
     <title>Weather Dashboard</title>
 </head>
 <body>
-    <div class=container-md>
+    <div class="rounded">
         <div class="row">
-            <div class="col-md-12 text-center bg-light p-5" id="title"><h1>Weather Dashboard</h1></div>
+            <div class="col-md-12 text-center text-light bg-dark p-4 rounded border border-dark" id="title"><h1>Weather Dashboard</h1></div>
         </div>
         <div class="row">
             <div class="col-md-3 p-3">
@@ -18,12 +18,14 @@
                     <div class="col-md-12 m-2" id="searchHistory"></div>
                 </div>
             </div>
-            <div class="col-md-9" id="allforecast">
+            <div class="col-md-9 p-3" id="allforecast">
                 <div class="row" >
-                    <div class="col-md-12 m-2" id="todayforecast"></div>
+                    <div class="col-md-12 py-3 pl-40" id="todayforecast"></div>
                 </div>
-                <div class="row" >
-                    <div class="col-md-12 m-2" id="5dayforecast"></div>
+                <div class="row">
+                    <div class="col-md-12 mt-3" id="5daytitle"></div>
+                </div>
+                <div class="row" id="5dayforecast" >
                 </div>
             </div>
         </div>
