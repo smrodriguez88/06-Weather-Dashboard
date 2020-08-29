@@ -46,7 +46,7 @@ $.ajax(searchSettings).done(function (response) {
     city["today"]["humidity"] = response.current.humidity
     city["today"]["windspeed"] = response.current.wind_speed
     city["today"]["uvi"] = response.current.uvi
-    city["today"]["wicon"] = "http://openweathermap.org/img/w/"+response.current.weather[0].icon+".png"
+    city["today"]["wicon"] = "https://openweathermap.org/img/w/"+response.current.weather[0].icon+".png"
     city["today"]["wdesc"] = response.current.weather[0].description
      // Store 5 day forecast data with i being the unique key name
      // Start i at 1 as 0 is the forecast for today
@@ -55,7 +55,7 @@ $.ajax(searchSettings).done(function (response) {
         city[i] = {}
         // Convert EPOCH time to normal datetime format to get date
         city[i]["datetime"] = moment.unix(response.daily[i].dt).format('M/D/YYYY')
-        city[i]["wicon"] = "http://openweathermap.org/img/w/"+response.daily[i].weather[0].icon+".png"
+        city[i]["wicon"] = "https://openweathermap.org/img/w/"+response.daily[i].weather[0].icon+".png"
         city[i]["wdesc"] = response.daily[i].weather[0].description
         // Convert Kelvin to Farenheight
         city[i]["temp"] = ((Number(response.daily[i].temp.day) - 273.15) * 9/5 + 32).toFixed(1)
